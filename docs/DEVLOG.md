@@ -1,13 +1,23 @@
-# BuxbrewCharge — development record
+# BuxbrewCharge — development journal
 
-**Author:** Babuni.dev
+**Author and creative direction:** Babuni.dev
 
-## Retrospective source reconstruction — 2026-10-26
+## Origins and early iteration — August 2025
 
-The repository preserves a small, focused WoW experiment. A Vanilla WoW 1.12 action-slot emote addon: pressing one configured action button may produce a random built-in battle or reaction emote. Attach expressive character reactions to a player action without altering combat outcomes. The visible implementation supplies the clearest record of how the interaction was approached: `BuxbrewCharge.lua` hooks `UseAction`, draws from `DoEmote` tokens, retains an account-wide slot setting in `BuxbrewChargeDB`, and uses a 21-second emote cooldown. `BuxbreCharge.toc` declares the add-on and saved variables.
+GitHub records an initial repository on **2025-08-18**, followed by the manifest commit `8bd4a0f` and initial Lua commit `e88f139`. This was a small experiment in giving a combat ability a visible personality. Instead of changing game mechanics, the addon ties emote output to an action button. The current source uses WoW's built-in reactions, making the character's performance depend on timing and surprise rather than custom assets.
 
-This is a retrospective reconstruction, not a transcript of original design discussions. The visible source uses built-in emotes rather than custom audio or visuals; triggering is tied to an action slot instead of spell-success detection. Its source and metadata existed before the current documentation pass; original conception and iteration dates are not recoverable from these files alone. In this pass, AI assistance organized the existing evidence into documentation, without changing gameplay or attributing the original idea to AI.
+The historical intent in the preceding sentence is reconstructed from the existing add-on and repository description; no original design conversation was recovered. The specific first-commit contents can be inspected in those commits.
 
-## Verification
+## Later source revisions — November 2025 to January 2026
 
-Evidence: current `README.md`, addon `.toc` metadata and inspected main `.lua` source; no full historical conversation or runtime test was available. Manual validation in a WoW 1.12 client, slot-watch and configuration persistence, cooldown behavior, and safe operation with unknown emote tokens.
+Git history shows Lua revisions on **2025-11-01** (`de0c85d`) and **2026-01-10** (`3ff0fcc`). Those commits have generic titles, so this journal does not pretend to know exactly why the author changed each line without a diff. A later **2026-09-18** commit (`41c5b32`) standardized client/provider terminology. This is a genuine recorded maintenance change rather than an imagined design pivot.
+
+## Current mechanics and design character
+
+The current Lua wraps `UseAction`, keeps the action going, chooses from ten built-in emote tokens and enforces a 21-second cooldown. `/bbc watch` and `/bbc slot` make the response discoverable and configurable in chat. The only saved preference is the watched slot. This approach makes the feature intentionally small: it appears when the player acts, not when a background process decides to interrupt.
+
+## Documentation reconstruction — 2026-10-26
+
+Earlier automated work placed only skeletal concept and architecture notes in the repo. This pass read the actual code, manifest and Git commits and wrote a detailed user guide, visual-content register, evidence-based decisions and test backlog. A potential installation problem surfaced: the manifest is spelled `BuxbreCharge.toc` rather than `BuxbrewCharge.toc`. The discrepancy was **documented**, not fixed.
+
+**Attribution:** Babuni.dev authored the project and its creative direction. AI assistance in this pass comprised reading repository evidence, organizing it and drafting documentation. No game changes or live-client tests were made; installation and compatibility remain unverified.

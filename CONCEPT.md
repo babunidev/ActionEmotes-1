@@ -1,19 +1,21 @@
-# BuxbrewCharge — concept
+# BuxbrewCharge — creative concept
 
-**Author:** Babuni.dev
+**Author and creative direction:** Babuni.dev
 
-## Existing idea
+## The original experience
 
-A Vanilla WoW 1.12 action-slot emote addon: pressing one configured action button may produce a random built-in battle or reaction emote.
+Combat in World of Warcraft can express a character's personality beyond damage numbers and ability effects. BuxbrewCharge adds a small, unpredictable flourish when the player presses a personally selected action button. A normal action becomes an opportunity for a shout, a cheer, a charge gesture or an incongruous reaction. The point is comic character presence, not efficiency.
 
-## Intended experience
+The choice of **one watched action slot** makes the interaction deliberately tied to something the player does. The 21-second interval turns the flourish into a rare event rather than a continuous stream of messages. All ten current choices are built-in emote tokens; no custom animation, sound file, combat rotation or text-generation service is required.
 
-Attach expressive character reactions to a player action without altering combat outcomes.
+## Boundaries preserved in source
 
-## Boundaries
+- Trigger: press of the configured action slot, not successful cast detection.
+- Outcome: an emote using `DoEmote`; the original action is still invoked.
+- Persistence: account-wide watched-slot preference.
+- Customization: change the emote table in source or choose a new slot through chat. No in-game emote editor exists.
+- Mood: light, dramatic roleplay accents; not mechanical advantage.
 
-The visible source uses built-in emotes rather than custom audio or visuals; triggering is tied to an action slot instead of spell-success detection.
+## Evidence versus inference
 
-## Evidence status
-
-Evidence: current `README.md`, addon `.toc` metadata and inspected main `.lua` source; no full historical conversation or runtime test was available.
+The implementation and project description support this *character-flavor* reading. They do not prove a recorded original conversation, an approved name explanation, or tested client behavior. See [development history](docs/DEVLOG.md) for dated commits and [decision evidence](docs/DECISIONS.md) for facts versus interpretations.

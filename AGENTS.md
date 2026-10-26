@@ -1,5 +1,15 @@
-# Development rules — BuxbrewCharge
+# BuxbrewCharge — development rules
 
 **Author:** Babuni.dev
 
-Keep existing gameplay and player-facing behavior unless Babuni.dev directs a change. Separate original author direction from AI analysis, edits and later reconstruction. Never infer past approvals from code or comments. Treat source as evidence of implementation, not proof of runtime behavior. When implementing, update README, CONCEPT, ROADMAP, CHANGELOG and docs/DEVLOG together. Preserve license terms, third-party attribution and prior dates. Test on the declared WoW client before calling a feature verified.
+BuxbrewCharge is an expressive Vanilla WoW add-on, not a combat automation framework. Do not change the single-slot trigger, emote pool, timing or gameplay without Babuni.dev's direction.
+
+1. Read `README.md`, `CONCEPT.md`, `docs/DECISIONS.md` and the actual Lua/TOC before coding.
+2. Credit Babuni.dev for creative authorship. Describe AI suggestions, analysis and code edits as separate contributions; do not assign the user's idea to an AI system.
+3. Preserve original dated Git history and never invent approvals from existing code. Mark any reconstructed motivation as interpretation.
+4. Source evidence, successful in-game tests and future proposals are different statuses.
+5. When editing runtime behavior, update usage, architecture, changelog and narrative devlog in the same review.
+6. Maintain third-party attributions and don't upload account data, private logs or credentials.
+7. Check Vanilla 1.12/Lua 5.0 compatibility, folder/TOC naming and hook chaining, then report actual test commands and results.
+
+This documentation pass does not authorize code fixes on its own.
