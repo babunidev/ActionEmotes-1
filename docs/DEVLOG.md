@@ -34,3 +34,7 @@ A source review revealed that the addon's event handler used a newer callback co
 ## Making the first emote reliable — October 31, 2026
 
 With the client-specific API references checked, I asked AI to correct the attack emote token, reject invalid action slots, and remove an unintended delay before the first emote. The addon still selects randomly from the same ten emotes and keeps its 21-second interval. Simulated tests cover those changes; the result has not yet been tested inside Turtle WoW or Octo WoW.
+
+## Leaving live testing open to others — October 31, 2026
+
+The addon is still available, even though I'm no longer playing on the servers it was made for. Since live testing is no longer part of my own workflow, I asked AI to make the limits of automated verification clear and invite anyone who tries the addon to send feedback to babunigaming@gmail.com. No additional gameplay changes or in-game tests were made in this update.
