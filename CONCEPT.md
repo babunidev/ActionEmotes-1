@@ -1,6 +1,6 @@
-# BuxbrewCharge — creative concept
+# Action Emotes #1 — creative concept (formerly BuxbrewCharge)
 
-**Author and creative direction:** Babuni.dev
+**By:** Babuni
 
 ## The original experience
 
