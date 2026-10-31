@@ -1,9 +1,19 @@
-# BuxbrewCharge — human/AI collaboration and attribution
+# Action Emotes #1 / BuxbrewCharge — human–AI collaboration
 
-**Human author:** Babuni.dev.
+**Human creator and creative direction:** Babuni.dev.
 
-The core idea of expressive, player-action-driven roleplay, its presentation and the author's selection/approval of any future change must be credited to Babuni.dev. Existing repository code or a model-generated write-up does not establish who proposed a specific historical detail; avoid claiming a complete transcript.
+## Original development (creator retrospective, 2026-10-31)
 
-**Verified contribution of this 2026-10-26 session:** an AI assistant inspected the live GitHub repository, read Lua/TOC and dated commits, identified a possible manifest naming problem and authored expanded documentation. This is documentation work, not evidence of live-game testing or originating the creative idea.
+The creator wanted their warrior **Buxbrew** to express personality through action-triggered emotes on a World of Warcraft 1.12 private-server client. The idea built on earlier WeakAuras experiments for the orc **Mad X Mokaya** in WoW Classic Anniversary.
 
-**Future record format:** preserve date, author direction, AI proposal, explicit acceptance/rejection, relevant commit/path, tests actually run, and remaining uncertainty. Never reproduce private conversations or third-party works without permission.
+The creator worked locally, manually creating folders and Lua files, copying code from a standard ChatGPT chat, installing it, testing it inside the game, and iterating through observed results. AI was a conversational code assistant—not an autonomous coding agent, repository operator, or game tester. The creator chose the goal and tested the outcomes.
+
+This description is based on the creator's later account. A related 2025-08-18 conversation confirms the original BuxbrewCharge name and Buxbrew association; the original step-by-step coding chat was not recovered.
+
+## Documentation work (2026-10-26 and 2026-10-31)
+
+A 2026-10-26 AI-assisted review examined source, manifest, and commits and drafted source-grounded documentation. On 2026-10-31, the creator corrected and enriched the origin story, explicitly withheld the name of the private server, and selected **Action Emotes #1** as the retrospective identity for this first addon. AI organized and wrote the public-safe narrative. The GitHub repository name, addon identifiers, and runtime code were not changed as part of the documentation revision.
+
+## Evidence standard
+
+Distinguish creator recollections, dated conversations, Git commits, source-observed behavior, AI-authored interpretation, and tested outcomes. No recovered conversation is claimed to be complete. Do not imply a version was verified in-game during a later documentation pass when no such test occurred.
