@@ -50,3 +50,9 @@ The older diffs now establish what changed, but not why those revisions were mad
 - The initial emote timestamp is now unset until an emote is attempted. The first eligible action can trigger immediately; subsequent emotes remain limited to one every 21 seconds. `/bbc timer` reports 0 seconds before the first emote.
 - Automated tests cover the timer, cooldown boundaries, token, valid and invalid slot input, and preservation of the original action. No other gameplay rules or installation packaging changed.
 - **Verification:** simulated Lua/CI tests only; no Turtle WoW or Octo WoW in-game test was performed.
+
+## 2026-10-31 — community testing invitation
+
+- At my request, AI updated the README, roadmap and development documentation to clarify that I no longer play on the target servers and will not be performing new in-game tests myself.
+- Community members are welcome to test the addon and send feedback to **babunigaming@gmail.com**.
+- **Documentation only:** the latest runtime remains unverified in-game; no Lua, TOC, installation or license changes were made.

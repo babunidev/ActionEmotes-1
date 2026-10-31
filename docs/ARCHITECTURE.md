@@ -19,12 +19,12 @@ The client initializes its random generator. The previous `PLAYER_LOGIN` handler
 
 The watched slot is validated as a whole number from 1 to 120 when configured through `/bbc slot`. Invalid entries do not overwrite the stored slot. The timer and watch-mode switch are **not** persisted. There is no separate cooldown scheduler, animation asset or dependency.
 
-## What I still need to verify
+## What remains unverified in-game
 
 - The original misspelled manifest name was corrected. Both files now live under the installable `BuxbrewCharge/` folder. A live-client installation check is still required.
 - Global `UseAction` replacement can interact with other addons; load order and correct delegation must be checked.
 - The timer uses `GetTime()` and an initially unset emote timestamp; the first eligible action may emote immediately. This is covered by simulated tests but remains unverified in a live server client.
-- Code reading is not equivalent to live-client confirmation.
+- Code reading and simulated tests are not equivalent to live-client confirmation. Since I'm no longer playing on the target servers, live tests are not planned as part of my own workflow; community test reports can be sent to babunigaming@gmail.com.
 
 ## Files in my repository
 
