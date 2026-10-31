@@ -29,3 +29,9 @@ The older diffs now establish what changed, but not why those revisions were mad
 - At my direction, AI revised the documents to follow the new creative-first writing rules, with varied sentence openings and clear attribution.
 - Inspection of earlier Lua diffs clarified the emote-pool and parser changes; the development journal was condensed.
 - **Documentation only:** no Lua, manifest or license change and no fresh in-game test.
+
+## 2026-10-31 — installation packaging correction
+
+- Following my request to repair installation packaging, AI moved the unchanged Lua source and existing TOC contents into an installable `BuxbrewCharge/` folder and corrected the manifest filename to `BuxbrewCharge.toc`.
+- Documentation was updated to distinguish the repository name (`ActionEmotes-1`) from the addon folder installed in `Interface/AddOns/`.
+- **Verified:** file layout, manifest reference and unchanged Lua content by Git object identity. **Not yet verified:** loading or behavior in a WoW 1.12 client.

@@ -10,14 +10,15 @@ Before this, I had experimented with WeakAuras in WoW Classic Anniversary for my
 
 The addon began locally with help from an ordinary ChatGPT conversation. During development, I discussed code with my AI assistant, copied Lua snippets into files myself, created the folders, installed the addon and tested it in the game. Each time I spotted something to improve, I went back to the chat, worked through the change, copied the new code and tried again. At the time, I wasn't using Cursor, Codex or another integrated coding agent. It took persistence, but seeing Buxbrew respond in-game made it worthwhile.
 
-To distinguish it from later experiments, I now call the original addon **Action Emotes #1** to distinguish it from the related addons I developed afterward. The GitHub repository is [ActionEmotes-1](https://github.com/babunidev/ActionEmotes-1), while its historical Lua, TOC and commands still use BuxbrewCharge identifiers.
+To distinguish this original experiment from the related addons that followed, I now call it **Action Emotes #1**. The GitHub repository is [ActionEmotes-1](https://github.com/babunidev/ActionEmotes-1), while its historical Lua, TOC and commands still use BuxbrewCharge identifiers.
 
 ## Using the original addon
 
-1. Place the addon in the appropriate WoW `Interface/AddOns` directory and enable it. The folder and TOC filename need to match; the committed packaging has not been retested.
-2. Enter `/bbc watch`, press a button to identify its action-slot number, then enter `/bbc watch` again.
-3. Enter `/bbc slot <number>` to select the slot.
-4. Use that action to trigger eligible emotes.
+1. Download and extract the repository archive, or clone the repository.
+2. Copy the **`BuxbrewCharge` folder inside the repository** to your WoW 1.12 `Interface/AddOns/` directory. Do not install the outer `ActionEmotes-1` repository folder.
+3. Confirm that `Interface/AddOns/BuxbrewCharge/` contains both `BuxbrewCharge.toc` and `BuxbrewCharge.lua`. Enable the addon in the client.
+4. Enter `/bbc watch`, press an action-bar button to find its slot number, then enter `/bbc watch` again.
+5. Enter `/bbc slot <number>` to select that slot; eligible presses can then trigger emotes.
 
 | Command | Function |
 | --- | --- |
@@ -34,7 +35,7 @@ To distinguish it from later experiments, I now call the original addon **Action
 
 The source wraps `UseAction`, watches one chosen slot, chooses among ten built-in emotes with `DoEmote`, and uses a fixed 21-second cooldown. It saves the watched slot in `BuxbrewChargeDB.slot`. It does **not** verify a successful ability cast, offer a configurable activation probability or automate combat. Randomness determines which emote is attempted, not whether an eligible press triggers one.
 
-The committed manifest is named `BuxbreCharge.toc`, which differs from `BuxbrewCharge.lua`. That packaging discrepancy remains uncorrected, and The currently committed addon has not undergone a fresh in-game test during this documentation review.
+The original manifest spelling error (`BuxbreCharge.toc`) has been corrected by placing the renamed manifest alongside the unchanged Lua source in `BuxbrewCharge/`. The folder and manifest now match by inspection; this packaging fix has not yet been tested inside a running WoW 1.12 client.
 
 **About this account:** This origin story comes from my recollections shared on October 31, 2026, combined with repository evidence. The original step-by-step ChatGPT conversation has not been recovered. Later AI-assisted documentation is not the same as original in-game testing.
 

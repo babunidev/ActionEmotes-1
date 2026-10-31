@@ -4,7 +4,7 @@
 
 ## The emote pool I used
 
-The current `EMOTE_TOKENS` table in `BuxbrewCharge.lua` contains ten strings:
+The current `EMOTE_TOKENS` table in [`BuxbrewCharge/BuxbrewCharge.lua`](../BuxbrewCharge/BuxbrewCharge.lua) contains ten strings:
 
 `CHARGE`, `ATTACKTARGET`, `ROAR`, `CHEER`, `FLEX`, `TRAIN`, `LAUGH`, `CHUCKLE`, `BORED`, `WHISTLE`.
 

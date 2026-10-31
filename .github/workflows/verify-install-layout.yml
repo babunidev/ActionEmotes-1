@@ -1,0 +1,21 @@
+name: Verify addon installation layout
+
+on:
+  push:
+    paths:
+      - 'BuxbrewCharge/**'
+      - 'tests/test_install_layout.py'
+      - '.github/workflows/verify-install-layout.yml'
+  pull_request:
+    paths:
+      - 'BuxbrewCharge/**'
+      - 'tests/test_install_layout.py'
+      - '.github/workflows/verify-install-layout.yml'
+
+jobs:
+  test-package-layout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate installable folder
+        run: python3 -m unittest discover -s tests -v

@@ -17,7 +17,7 @@ Technical references, changelog facts, code descriptions and test inventories ma
 
 The repository is now `ActionEmotes-1`, originally `BuxbrewCharge`. Preserve historical Lua, TOC and slash-command identifiers unless Babuni explicitly approves a runtime migration.
 
-1. Inspect `README.md`, `CONCEPT.md`, `docs/DECISIONS.md` and Lua/TOC before changing functionality.
+1. Inspect `README.md`, `CONCEPT.md`, `docs/DECISIONS.md` and `BuxbrewCharge/` Lua/TOC before changing functionality.
 2. Credit Babuni's creative direction and hands-on development; separately record AI code, analysis and documentation contributions.
 3. Never fabricate historical events or approvals. Distinguish recollection, source evidence, implementation and verification.
 4. Do not change gameplay, the single-slot trigger, emote pool or timing without explicit direction.
@@ -25,4 +25,4 @@ The repository is now `ActionEmotes-1`, originally `BuxbrewCharge`. Preserve his
 6. Preserve third-party attributions and keep credentials, logs and private conversations out of public documentation.
 7. Check WoW 1.12/Lua 5.0 compatibility, folder/TOC naming and hook chaining for future runtime revisions; report only tests actually performed.
 
-The currently observed manifest filename discrepancy `BuxbreCharge.toc` remains unresolved. The existing MIT license remains in force unless the creative makes a separate licensing decision.
+The earlier `BuxbreCharge.toc` spelling issue was corrected by moving the unchanged code into the `BuxbrewCharge/` folder and naming its manifest `BuxbrewCharge.toc`. This layout is source-verified, not yet confirmed in-game. Keep the two runtime files together and the folder name aligned with the TOC. The existing MIT license remains in force unless the creative makes a separate licensing decision.

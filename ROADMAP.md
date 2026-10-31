@@ -4,15 +4,15 @@
 
 ## What I have now
 
-The repository contains a 1.0.0 Lua addon, an interface-11200 manifest, a ten-emote pool, a 21-second throttle, `/bbc` commands and account-wide saved-slot support. A fresh client verification of the currently committed addon has not been performed.
+The repository contains the 1.0.0 Lua addon and interface-11200 manifest in a correctly named `BuxbrewCharge/` installation folder. It retains the ten-emote pool, 21-second throttle, `/bbc` commands and account-wide saved-slot support. Fresh in-game verification has not been performed.
 
 ## What I still need to verify
 
-- **Packaging:** verify `BuxbreCharge.toc` versus `BuxbrewCharge` folder naming; resolve only with an explicit, reviewed code/package correction.
+- **Packaging in a client:** verify that the committed `BuxbrewCharge/` directory, including `BuxbrewCharge.toc`, is recognized and loads in the original game. The repository structure has been corrected and inspected, but not live-tested.
 - **Live client:** confirm the addon appears in the addon menu and `/bbc watch` reports the intended numeric slot.
 - **Gameplay:** verify a watched-slot press still invokes the ability, the emote pool is valid and duplicate presses are throttled.
 - **Persistence:** verify `BuxbrewChargeDB.slot` survives `/reload` and a restart.
 - **Interoperability:** check behavior alongside other global `UseAction` hook addons.
 - **Edge cases:** check unknown slot, `/bbc reset`, logout saving, and immediate `/bbc emote` at startup.
 
-These are checks I have not completed as part of this documentation revision. No new gameplay features were approved in this documentation review.
+These checks still require a real WoW 1.12 client. The packaging change did not approve or implement new gameplay features.
