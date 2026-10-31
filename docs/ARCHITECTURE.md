@@ -7,7 +7,7 @@
 
 1. `UseAction(slot, checkCursor, onSelf)` is captured in `_Orig_UseAction` and replaced with a wrapper.
 2. Each press lazily initializes settings, optionally prints the slot when watch mode is on and compares the integer slot to `WATCH_SLOT`.
-3. On a match, `doEmoteNow()` compares `GetTime()` with `LAST_EMOTE_TIME`. It returns while less than 21 seconds have elapsed.
+3. On a match, `doEmoteNow()` checks `LAST_EMOTE_TIME`. An unset timestamp permits the first emote immediately; subsequent attempts are suppressed until 21 seconds have passed since the last emote.
 4. On an eligible press, it records the time, selects one of ten tokens through `math.random` and calls `DoEmote`, with a text-emote fallback if `DoEmote` is unavailable.
 5. The wrapper calls the original `UseAction`, preserving the underlying button action by design.
 
@@ -17,13 +17,13 @@
 
 The client initializes its random generator. The previous `PLAYER_LOGIN` handler calling `math.randomseed` has been removed; `math.random` still selects the emote token.
 
-The timer and watch-mode switch are **not** persisted. There is no separate cooldown scheduler, animation asset or dependency.
+The watched slot is validated as a whole number from 1 to 120 when configured through `/bbc slot`. Invalid entries do not overwrite the stored slot. The timer and watch-mode switch are **not** persisted. There is no separate cooldown scheduler, animation asset or dependency.
 
 ## What I still need to verify
 
 - The original misspelled manifest name was corrected. Both files now live under the installable `BuxbrewCharge/` folder. A live-client installation check is still required.
 - Global `UseAction` replacement can interact with other addons; load order and correct delegation must be checked.
-- The timer uses `GetTime()` and starts from `LAST_EMOTE_TIME = 0`; an immediate first emote is not guaranteed if client uptime is less than 21 seconds.
+- The timer uses `GetTime()` and an initially unset emote timestamp; the first eligible action may emote immediately. This is covered by simulated tests but remains unverified in a live server client.
 - Code reading is not equivalent to live-client confirmation.
 
 ## Files in my repository

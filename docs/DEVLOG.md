@@ -30,3 +30,7 @@ The earlier review exposed a spelling mistake in the TOC filename and a reposito
 ## Revisiting Vanilla event behavior — October 31, 2026
 
 A source review revealed that the addon's event handler used a newer callback convention and tried to seed the random generator itself. After checking references specific to the old client, I asked AI to correct both together. The implementation now uses Vanilla's global event name, and the redundant seeding step is gone. A simulated event test covers the relevant code paths; testing in the game remains outstanding.
+
+## Making the first emote reliable — October 31, 2026
+
+With the client-specific API references checked, I asked AI to correct the attack emote token, reject invalid action slots, and remove an unintended delay before the first emote. The addon still selects randomly from the same ten emotes and keeps its 21-second interval. Simulated tests cover those changes; the result has not yet been tested inside Turtle WoW or Octo WoW.

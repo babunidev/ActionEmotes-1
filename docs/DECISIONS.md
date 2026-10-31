@@ -31,3 +31,7 @@ Following my instruction to repair installation packaging, AI moved the unchange
 ## Event API correction — October 31, 2026
 
 Following my request to verify compatibility with the original 1.12 client, AI checked Vanilla-era event examples and the documented random API. The source now reads the global `event` value in its callback, drops the unnecessary `PLAYER_LOGIN` registration and avoids `math.randomseed`. The existing combat/emote design was deliberately preserved. A mocked test exercises event dispatch and saved-slot handling; live-client verification is still pending.
+
+## Emote and first-use reliability — October 31, 2026
+
+At my request, AI corrected the `/attacktarget` emote's internal token to `ATTACKMYTARGET`, validated `/bbc slot` inputs against the 1–120 action-slot range documented by Turtle WoW, and made the first eligible emote immediate rather than dependent on client uptime. The 21-second interval after each emote and the ten-item random pool remain intact. Automated simulation verifies the changed paths; actual Turtle WoW and Octo WoW behavior remains untested.
