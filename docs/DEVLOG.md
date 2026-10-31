@@ -1,38 +1,40 @@
-# Action Emotes #1 / BuxbrewCharge — development journal
+# Action Emotes #1 — my development journal
 
-**By:** Babuni  
-**Status:** Historical reconstruction combining repository evidence with Babuni's account recorded on 2026-10-31.
+**By Babuni**  
+**Historical account:** My recollections recorded October 31, 2026, alongside repository and commit evidence.
 
-## Before the addon: giving characters a voice
+## An idea before I knew how to make an addon
 
-The project did not begin as a plan to build a suite of addons. It began with a desire to make a player character feel expressive in the middle of ordinary gameplay. Babuni had already explored event-driven character behavior with WeakAuras while playing **Mad X Mokaya**, an orc in WoW Classic Anniversary. That experience established the idea: a press or event could carry a small, theatrical response that made a character feel more alive.
+I had already been playing with character expression in WoW Classic Anniversary, using WeakAuras for my orc **Madaxe Mokaya**. I liked the idea that a character could react to what I was doing, rather than simply carry out a command without personality.
 
-Later, while playing the warrior **Buxbrew** on an unnamed World of Warcraft private server, Babuni wanted a similar experience in the older **1.12 client**. The earlier WeakAuras workflow was not the path for this environment, so the idea became a small Lua addon.
+When I started playing my warrior **Buxbrew** on an unnamed private server, I found myself wanting the same feeling in the older **World of Warcraft 1.12** client. The tools and possibilities were different there. I decided to try writing a small addon.
 
-## August 2025: making it work by hand
+## August 2025 — my first addon
 
-This was Babuni's **first addon**. Babuni worked primarily on their own computer and used a standard ChatGPT conversation to discuss and revise Lua code. There was no integrated editing agent making changes to a repository: Babuni manually copied code from chat into Lua files, created and maintained the directory structure, installed the addon, and tested the results inside the game.
+I didn't have an integrated AI coding assistant editing files for me. I was working on my own computer, with a normal ChatGPT conversation open. I described what I wanted, asked my AI assistant about the Lua code, copied the results myself, created the addon folders and files, and loaded everything into the game.
 
-That workflow was awkward by modern standards. Every iteration required Babuni to carry code between chat and files, identify behavior in the client, and decide what to change next. But it was also unusually tangible: trying a new version in-game and seeing the character respond was satisfying, and the limitations of the old client became part of the experiment.
+Then I tested it. If something didn't work—or if I had another idea—I went back to the chat, tried to work out what to change, edited the files again and returned to the game. It wasn't always easy to understand what was possible or why a change behaved the way it did. But watching the character finally perform those little responses was genuinely satisfying. Each small successful experiment gave me another reason to keep exploring.
 
-The addon was called **BuxbrewCharge** because of its connection to the warrior Buxbrew and the Charge ability. The actual implementation is broader: it watches a configured action slot rather than requiring Charge specifically. This distinction motivates the proposed retrospective series title **Action Emotes #1**.
+I originally called it **BuxbrewCharge**, after the warrior and the ability that helped define its identity. The actual addon was more general: it watched one action slot, not just Charge. Looking back, **Action Emotes #1** is a clearer name, and it identifies this as the beginning of a series of related experiments.
 
-The repository was created on **2025-08-18**. Git history includes manifest commit `8bd4a0f` and initial Lua commit `e88f139`. A related chat from that date records the addon name and clarifies that Buxbrew—not Mad X Mokaya—was its intended character. The full original Lua-development conversation has not been recovered. These facts should not be mistaken for a verbatim record of each early iteration.
+The GitHub repository was created on **August 18, 2025**. The earliest manifest and Lua commits include `8bd4a0f` and `e88f139`. A related conversation dated August 18 confirms the BuxbrewCharge name and its connection to Buxbrew. I have not recovered the complete original code-building chat, so I cannot reliably retell each individual debugging exchange.
 
-## How the first design worked
+## What I made
 
-The source wraps `UseAction`, recognizes one user-selected action slot, and forwards the original action while occasionally performing a built-in emote. The current snapshot contains a ten-emote pool, a fixed 21-second cooldown, and basic chat commands for observing and selecting the slot. Simplicity was a practical strength: the addon did one small thing, and its result was immediately visible in-game.
+I built a one-slot emote trigger that passes the actual action through. In the current source, `UseAction` is wrapped, the watched slot is stored in saved variables, and ten built-in emotes are available. The timer is a fixed **21 seconds**. I valued its simplicity: once I knew the slot, I could see it work in the game.
 
-Babuni's retrospective explains the motivation and hands-on testing during original development. A new in-game verification of the **current committed source** has not been performed.
+Those specifics describe the committed source, not a fresh live test performed while writing this account.
 
-## Later source changes
+## Later changes and retrospective documentation
 
-Git history records Lua revisions on **2025-11-01** (`de0c85d`) and **2026-01-10** (`3ff0fcc`). Their generic commit messages do not independently establish the precise reasons for each change. A **2026-09-18** commit (`41c5b32`) updated compatibility/provider-neutral wording.
+The Git history shows Lua revisions on **November 1, 2025** (`de0c85d`) and **January 10, 2026** (`3ff0fcc`). Their generic commit titles do not say what I intended with each change. A **September 18, 2026** commit (`41c5b32`) adjusted compatibility/provider-neutral wording.
 
-## Documentation reconstruction: October 2026
+In an AI-assisted documentation review on **October 26, 2026**, I had the repository examined and its documentation expanded. That review identified an unresolved possible installation issue: the manifest is named `BuxbreCharge.toc` rather than `BuxbrewCharge.toc`. No runtime change or game test took place.
 
-A **2026-10-26** documentation review examined existing Lua, TOC and Git evidence and expanded the project record. It noted a possible packaging issue: `BuxbreCharge.toc` omits a “w” relative to `BuxbrewCharge`. The discrepancy was documented, not fixed.
+On **October 31, 2026**, I told my AI assistant the fuller history of how I started, set the naming direction **Action Emotes #1**, and asked that the original private server not be named. The GitHub repository was later renamed to `ActionEmotes-1`; the installed addon's internal names remain historical.
 
-On **2026-10-31**, Babuni supplied the fuller personal history above and chose to treat this addon as **Action Emotes #1**, the original experiment in a developing family of expressive addons. Babuni also specified that the private server must remain unnamed. Later addons may be compared for client versions and different features in a separate review. The GitHub repository has since been renamed to `ActionEmotes-1`. The installed addon's Lua and TOC identifiers remain unchanged.
+I also changed how I wanted the story told. These projects are my experiences, decisions and experiments. AI helped me write code and later assemble the documentation, but the story should be told from where I stood, not written about me from outside. This journal is a first-person reconstruction based on my account, not a recovered transcript of every original conversation.
 
-**Attribution and verification:** The original motivation, player characters, hands-on workflow, choices and recollections come from Babuni. AI contributed conversational coding assistance during original development according to Babuni's account, and drafted this retrospective record in 2026. Actual code commits remain historical evidence; the full original conversation, precise iteration sequence and fresh live-client verification remain unavailable.
+## What remains uncertain
+
+I have not yet verified the present committed addon in a running client, resolved the manifest discrepancy, or compared every later Action Emotes variant and its client version. I won't turn those open questions into claims of completed work.
