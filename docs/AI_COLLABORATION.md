@@ -4,7 +4,7 @@
 
 ## Original development (Babuni's retrospective, 2026-10-31)
 
-Babuni wanted their warrior **Buxbrew** to express personality through action-triggered emotes on a World of Warcraft 1.12 private-server client. The idea built on earlier WeakAuras experiments for the orc **Mad X Mokaya** in WoW Classic Anniversary.
+Babuni wanted their warrior **Buxbrew** to express personality through action-triggered emotes on a World of Warcraft 1.12 private-server client. The idea built on earlier WeakAuras experiments for the orc **Madaxe Mokaya** in WoW Classic Anniversary.
 
 Babuni worked locally, manually creating folders and Lua files, copying code from a standard ChatGPT chat, installing it, testing it inside the game, and iterating through observed results. AI was a conversational code assistant—not an autonomous coding agent, repository operator, or game tester. Babuni chose the goal and tested the outcomes.
 
