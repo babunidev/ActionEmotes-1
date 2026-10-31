@@ -42,3 +42,11 @@ The older diffs now establish what changed, but not why those revisions were mad
 - The unused `PLAYER_LOGIN` registration and `math.randomseed` call were removed. The client handles random-generator initialization; the emote-selection logic remains unchanged.
 - A mocked legacy-event smoke test was added to the existing packaging checks. This verifies event dispatch and slot persistence in a simulated environment, **not** in a running WoW client.
 - No emote, cooldown, action-hook, slash-command, manifest or licensing changes were made.
+
+## 2026-10-31 — emote token, slot validation and first-use cooldown
+
+- At my request, AI corrected the `/attacktarget` emote token from `ATTACKTARGET` to `ATTACKMYTARGET`, following the Turtle WoW API token list.
+- The `/bbc slot` command now accepts only whole-number action slots 1–120 and leaves the previous setting intact on invalid input.
+- The initial emote timestamp is now unset until an emote is attempted. The first eligible action can trigger immediately; subsequent emotes remain limited to one every 21 seconds. `/bbc timer` reports 0 seconds before the first emote.
+- Automated tests cover the timer, cooldown boundaries, token, valid and invalid slot input, and preservation of the original action. No other gameplay rules or installation packaging changed.
+- **Verification:** simulated Lua/CI tests only; no Turtle WoW or Octo WoW in-game test was performed.

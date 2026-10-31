@@ -18,22 +18,22 @@ To distinguish this original experiment from the related addons that followed, I
 2. Copy the **`BuxbrewCharge` folder inside the repository** to your WoW 1.12 `Interface/AddOns/` directory. Do not install the outer `ActionEmotes-1` repository folder.
 3. Confirm that `Interface/AddOns/BuxbrewCharge/` contains both `BuxbrewCharge.toc` and `BuxbrewCharge.lua`. Enable the addon in the client.
 4. Enter `/bbc watch`, press an action-bar button to find its slot number, then enter `/bbc watch` again.
-5. Enter `/bbc slot <number>` to select that slot; eligible presses can then trigger emotes.
+5. Enter `/bbc slot <number>` (whole numbers from 1 through 120) to select that slot; eligible presses can then trigger emotes.
 
 | Command | Function |
 | --- | --- |
 | `/bbc watch` | Report pressed action slots |
-| `/bbc slot 3` | Save the watched slot |
+| `/bbc slot 3` | Save a valid action slot (1–120) |
 | `/bbc emote` | Request an emote subject to cooldown |
 | `/bbc info` | Show slot and emote information |
-| `/bbc timer` | Show remaining cooldown |
+| `/bbc timer` | Show remaining cooldown (0 seconds before the first emote) |
 | `/bbc reset` | Clear watched slot |
 | `/bbc save` | Save configuration |
 | `/bbc debug` | Print debugging details |
 
 ## What the code actually does
 
-The source wraps `UseAction`, watches one chosen slot, chooses among ten built-in emotes with `DoEmote`, and uses a fixed 21-second cooldown. It saves the watched slot in `BuxbrewChargeDB.slot`. It does **not** verify a successful ability cast, offer a configurable activation probability or automate combat. Randomness determines which emote is attempted, not whether an eligible press triggers one.
+The source wraps `UseAction`, watches one chosen slot, chooses among ten built-in emotes with `DoEmote`, and uses a fixed 21-second cooldown **between** emotes. The first eligible press can trigger an emote immediately. It saves the watched slot in `BuxbrewChargeDB.slot`. It does **not** verify a successful ability cast, offer a configurable activation probability or automate combat. Randomness determines which emote is attempted, not whether an eligible press triggers one.
 
 The original manifest spelling error (`BuxbreCharge.toc`) has been corrected by placing the renamed manifest alongside the Lua source in `BuxbrewCharge/`. The event handler now uses the WoW 1.12 global `event` convention, and the redundant `math.randomseed` call has been removed. Automated tests cover packaging and simulated legacy events; loading and gameplay still need verification inside a running WoW 1.12 client.
 

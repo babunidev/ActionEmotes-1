@@ -7,7 +7,7 @@
 -------------------------------------------------
 local EMOTE_TOKENS = {
   "CHARGE",        -- /charge (battle opener)
-  "ATTACKTARGET",  -- /attacktarget
+  "ATTACKMYTARGET",  -- /attacktarget (DoEmote token)
   "ROAR",          -- /roar
   "CHEER",         -- /cheer
   "FLEX",          -- /flex
@@ -23,7 +23,7 @@ local EMOTE_TOKENS = {
 -------------------------------------------------
 local WATCH_SLOT = nil
 local WATCH_MODE = false
-local LAST_EMOTE_TIME = 0
+local LAST_EMOTE_TIME = nil  -- first eligible action can emote immediately
 local EMOTE_COOLDOWN = 21  -- seconds
 
 -------------------------------------------------
@@ -77,7 +77,7 @@ end
 
 local function doEmoteNow()
   local now = GetTime()
-  if now - LAST_EMOTE_TIME < EMOTE_COOLDOWN then return end
+  if LAST_EMOTE_TIME and now - LAST_EMOTE_TIME < EMOTE_COOLDOWN then return end
   LAST_EMOTE_TIME = now
   local e = pick(EMOTE_TOKENS)
   if e then performBuiltInEmote(e) end
@@ -110,14 +110,16 @@ SlashCmdList["BUXBREWCHARGE"] = function(raw)
   local _, _, cmd, rest = string.find(s, "^(%S+)%s*(.-)$")
 
   if cmd == "slot" then
-    local n = tonumber(rest)
-    if n then
+    -- Vanilla/Turtle action slots are numbered 1 through 120.
+    local slotText = string.gsub(rest or "", "%s+$", "")
+    local n = tonumber(slotText)
+    if string.find(slotText, "^%d+$") and n and n >= 1 and n <= 120 then
       WATCH_SLOT = n
       local db = ensureDB()
       db.slot = n
       chat("watching action slot " .. n .. " (saved).")
     else
-      chat("usage: /bbc slot <number>")
+      chat("usage: /bbc slot <number> (1-120)")
     end
 
   elseif cmd == "watch" then
@@ -133,8 +135,11 @@ SlashCmdList["BUXBREWCHARGE"] = function(raw)
     chat("emote pool: " .. tlen(EMOTE_TOKENS) .. " tokens")
 
   elseif cmd == "timer" then
-    local remain = EMOTE_COOLDOWN - (GetTime() - LAST_EMOTE_TIME)
-    if remain < 0 then remain = 0 end
+    local remain = 0
+    if LAST_EMOTE_TIME then
+      remain = EMOTE_COOLDOWN - (GetTime() - LAST_EMOTE_TIME)
+      if remain < 0 then remain = 0 end
+    end
     chat("time left: " .. string.format("%.1f", remain) .. "s")
 
   elseif cmd == "reset" then
