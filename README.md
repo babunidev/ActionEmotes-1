@@ -1,44 +1,48 @@
-# BuxbrewCharge
+# Action Emotes #1 (historically BuxbrewCharge)
 
-**Author:** Babuni.dev  
+**Creator and creative direction:** Babuni.dev  
+**Original repository and installed addon:** `BuxbrewCharge`  
 **Target:** World of Warcraft 1.12 (Vanilla)  
-**Source version:** 1.0.0; **runtime status:** not verified in this documentation review.
+**Source version:** 1.0.0; **current runtime status:** not independently verified.
 
-BuxbrewCharge turns a chosen action-button press into a little theatrical event. When that slot is used, the addon attempts one randomly selected built-in character emote—such as CHARGE, ROAR, CHEER, TRAIN or WHISTLE. A fixed 21-second cooldown keeps the reactions occasional rather than constant. This is expressive roleplay flavor, **not** an auto-attack or ability automation tool.
+**Action Emotes #1** is the proposed series identity for the creator's first World of Warcraft addon. The GitHub repository and Lua addon are still named `BuxbrewCharge`; the proposed rename has **not** yet been applied.
+
+The addon watches one chosen action-bar slot. When that action is pressed and the cooldown permits it, it performs a random built-in emote while forwarding the original action. Despite the historical name, it does **not** exclusively watch Charge. It adds character expression, not combat automation.
+
+## Origin and purpose
+
+The creator began experimenting with expressive character behavior through WeakAuras while playing an orc called **Mad X Mokaya** in WoW Classic Anniversary. Later, while playing a warrior called **Buxbrew** on an unnamed World of Warcraft private server using the older 1.12 client, the creator wanted to bring that idea to a client without the same WeakAuras workflow.
+
+This was the creator's first addon. Development was primarily local and hands-on: discussing Lua snippets in a normal ChatGPT chat, copying them manually into local files, building the addon folder structure, loading the addon in-game, observing its behavior, and returning to the chat to refine it. This predates the creator's use of integrated AI coding agents such as Cursor or Codex. The repeated manual editing and testing made even this small result hard-won and satisfying.
+
+The account above is a **creator-supplied retrospective (2026-10-31)**, not a claim that the original development transcript was recovered. A related chat dated **2025-08-18** confirms the historical name BuxbrewCharge and its association with Buxbrew; the original step-by-step Lua-building conversation has not been located.
 
 ## Configure it
 
-1. Install the addon files under a WoW `Interface/AddOns` directory and enable it at character selection.
-2. Enter `/bbc watch` and press the action button you want to use. The addon prints its numeric action slot.
-3. Enter `/bbc slot <number>`; enter `/bbc watch` again to turn off slot reporting.
-4. Try the configured action. The first eligible trigger after the cooldown can choose an emote.
+1. Place the original addon files in the appropriate WoW `Interface/AddOns` folder and enable the addon.
+2. Type `/bbc watch`, press the action button to identify its slot number, and type `/bbc watch` again to stop reporting.
+3. Type `/bbc slot <number>` to choose the watched action slot.
+4. Use the selected action to trigger eligible emotes.
 
-**Packaging check required:** the committed manifest is spelled `BuxbreCharge.toc` (missing the second **w** in “Buxbrew”), whereas the project and Lua file use `BuxbrewCharge`. Confirm the actual addon-folder/manifest naming expected by your client before distributing; no installation test was run here.
-
-| Command | Current source behavior |
+| Command | Source-observed behavior |
 | --- | --- |
-| `/bbc watch` | Toggles action-slot reporting |
-| `/bbc slot 3` | Saves the watched slot account-wide |
-| `/bbc emote` | Requests an emote, respecting the same cooldown |
-| `/bbc info` | Shows slot, cooldown and emote-pool size |
-| `/bbc timer` | Shows remaining cooldown |
-| `/bbc reset` | Clears the watched slot |
-| `/bbc save` | Writes the slot to the saved-variable table |
-| `/bbc debug` | Displays saved-variable and current-slot state |
+| `/bbc watch` | Toggle action-slot reports |
+| `/bbc slot 3` | Save watched slot |
+| `/bbc emote` | Request an emote subject to cooldown |
+| `/bbc info` | Show configuration and emote count |
+| `/bbc timer` | Show remaining cooldown |
+| `/bbc reset` | Clear watched slot |
+| `/bbc save` | Save slot configuration |
+| `/bbc debug` | Report configuration state |
 
-There is **no configured chance percentage or per-slot cooldown setting** in this source snapshot. The emote list and 21-second timer are currently constants in `BuxbrewCharge.lua`.
+## Technical scope and limitations
 
-## How it works
+The Lua wraps `UseAction`, checks the watched slot, selects one of ten built-in `DoEmote` tokens and uses a fixed **21-second** cooldown. The watched slot is stored in `BuxbrewChargeDB.slot`. There is no user-configurable chance percentage or per-slot cooldown in this version. An action-slot press, not a verified successful ability cast, is the trigger.
 
-The Lua file wraps WoW's `UseAction`, checks whether the pressed slot matches `WATCH_SLOT`, chooses a random token from a ten-emote pool and calls `DoEmote`. It then passes the press to the previously installed `UseAction`. `BuxbrewChargeDB.slot` is an account-wide saved variable. No background per-frame loop is used.
+**Known packaging discrepancy:** the committed manifest is named `BuxbreCharge.toc` (missing a “w”), while the project and Lua file say `BuxbrewCharge`. The client installation behavior has not been re-tested. The historical addon file and slash command names were intentionally left unchanged in this documentation revision.
 
-Built-in emote behavior depends on the specific game client. Another addon also wrapping `UseAction` can create load-order interactions, so test combinations rather than assuming compatibility.
+## Project record
 
-## Documentation and project record
-
-- [Concept](CONCEPT.md) · [Experience design](docs/DESIGN.md) · [Emote content](docs/CONTENT.md)
-- [Technical architecture](docs/ARCHITECTURE.md) · [Decisions and limitations](docs/DECISIONS.md)
-- [Development journal](docs/DEVLOG.md) · [Historical changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md)
-- [AI collaboration](docs/AI_COLLABORATION.md) · [Development instructions](AGENTS.md)
-
-Earlier dates in the journal come from actual GitHub commits. Technical conclusions based only on the current source are labeled as such.
+- [Concept](CONCEPT.md) · [Development journal](docs/DEVLOG.md) · [Human–AI collaboration](docs/AI_COLLABORATION.md)
+- [Architecture](docs/ARCHITECTURE.md) · [Design](docs/DESIGN.md) · [Content](docs/CONTENT.md)
+- [Decisions](docs/DECISIONS.md) · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md) · [Development instructions](AGENTS.md)
