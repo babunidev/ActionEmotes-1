@@ -1,23 +1,28 @@
-# BuxbrewCharge — development rules
+# Action Emotes #1 — development and documentation rules
 
-**Author:** Babuni
+**Project owner and byline: Babuni**  
+**Portfolio and development umbrella: babuni.dev**
 
-BuxbrewCharge is an expressive Vanilla WoW add-on, not a combat automation framework. Do not change the single-slot trigger, emote pool, timing or gameplay without Babuni's direction.
+## Writing perspective
 
-1. Read `README.md`, `CONCEPT.md`, `docs/DECISIONS.md` and the actual Lua/TOC before coding.
-2. Credit Babuni for creative authorship. Describe AI suggestions, analysis and code edits as separate contributions; do not assign Babuni's idea to an AI system.
-3. Preserve original dated Git history and never invent approvals from existing code. Mark any reconstructed motivation as interpretation.
-4. Source evidence, successful in-game tests and future proposals are different statuses.
-5. When editing runtime behavior, update usage, architecture, changelog and narrative devlog in the same review.
-6. Maintain third-party attributions and don't upload account data, private logs or credentials.
-7. Check Vanilla 1.12/Lua 5.0 compatibility, folder/TOC naming and hook chaining, then report actual test commands and results.
+Write public-facing project narratives, concept notes, design reasoning, development journals and collaboration histories in **Babuni's first-person voice**. Use `I`, `my` and `I asked my AI assistant` where supported by Babuni's actual account. Never make Babuni a third-person subject in the main story. Do not make the AI the protagonist or narrator.
 
-This documentation pass does not authorize code fixes on its own.
+Use **Babuni** as the personal name. **babuni.dev** is the website, portfolio and umbrella for development work, not a substitute for the person's name.
 
-## Identity and naming
+Describe AI accurately and specifically: ChatGPT was a conversational Lua helper in the original development; there was no integrated agent editing files or testing in-game at that stage. Later AI documentation work must be distinguished from original development. Avoid invented first-person quotes, feelings, experiments, decisions or tests. The first-person narrative is an assisted reconstruction, not a claim of verbatim authorship of every sentence.
 
-Refer to the person responsible for the project as **Babuni**. Use **babuni.dev** only for the portfolio, development platform or website—not as a person's name or byline. Keep `BuxbrewCharge` when referring to historical code or installed addon identifiers; the repository's current name is `ActionEmotes-1`.
+Technical reference tables, changelog facts, code descriptions, and test inventories may use neutral language where that is clearer, while the reasoning and lived account remain in first person.
 
-## Identity
+## Project boundaries
 
-Refer to the individual as **Babuni**, not Babuni Dev. **babuni.dev** is the portfolio and development platform. The current repository is `ActionEmotes-1`; the historic addon identifiers remain unchanged.
+The repository is now `ActionEmotes-1`, originally `BuxbrewCharge`. Preserve historical Lua, TOC and slash-command identifiers unless Babuni explicitly approves a runtime migration.
+
+1. Inspect `README.md`, `CONCEPT.md`, `docs/DECISIONS.md` and Lua/TOC before changing functionality.
+2. Credit Babuni's creative direction and hands-on development; separately record AI code, analysis and documentation contributions.
+3. Never fabricate historical events or approvals. Distinguish recollection, source evidence, implementation and verification.
+4. Do not change gameplay, the single-slot trigger, emote pool or timing without explicit direction.
+5. Update relevant documentation and changelog alongside any runtime change.
+6. Preserve third-party attributions and keep credentials, logs and private conversations out of public documentation.
+7. Check WoW 1.12/Lua 5.0 compatibility, folder/TOC naming and hook chaining for future runtime revisions; report only tests actually performed.
+
+The currently observed manifest filename discrepancy `BuxbreCharge.toc` remains unresolved.
