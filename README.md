@@ -1,20 +1,20 @@
 # Action Emotes #1
 
-**By Babuni** · Originally **BuxbrewCharge** · World of Warcraft 1.12
+**Creative: Babuni** · Originally **BuxbrewCharge** · World of Warcraft 1.12
 
-This was my first World of Warcraft addon. I made it because I wanted my character to feel more expressive during ordinary gameplay. It watches an action-bar slot I choose and, when I press it, occasionally performs a random built-in emote without replacing the action itself. Despite its original name, it was never restricted to Charge.
+This was my first World of Warcraft addon. For Buxbrew, I wanted my character to feel more expressive during ordinary gameplay. It watches an action-bar slot I choose and, when I press it, performs a randomly chosen built-in emote when its cooldown permits, without replacing the action itself. Despite its original name, it was never restricted to Charge.
 
 ## Where it began
 
 Before this, I had experimented with WeakAuras in WoW Classic Anniversary for my orc **Madaxe Mokaya**. When I later played my warrior **Buxbrew** on an unnamed private server using the older WoW 1.12 client, I wanted some of that personality there too.
 
-I built the addon locally with help from an ordinary ChatGPT conversation. I discussed code with my AI assistant, copied Lua snippets into files myself, created the folders, installed the addon and tested it in the game. Each time I spotted something to improve, I went back to the chat, worked through the change, copied the new code and tried again. I wasn't using Cursor, Codex or another integrated coding agent. It took persistence, but seeing Buxbrew respond in-game made it worthwhile.
+The addon began locally with help from an ordinary ChatGPT conversation. During development, I discussed code with my AI assistant, copied Lua snippets into files myself, created the folders, installed the addon and tested it in the game. Each time I spotted something to improve, I went back to the chat, worked through the change, copied the new code and tried again. At the time, I wasn't using Cursor, Codex or another integrated coding agent. It took persistence, but seeing Buxbrew respond in-game made it worthwhile.
 
-I now call this original experiment **Action Emotes #1** to distinguish it from the related addons I developed afterward. The GitHub repository is [ActionEmotes-1](https://github.com/babunidev/ActionEmotes-1), while its historical Lua, TOC and commands still use BuxbrewCharge identifiers.
+To distinguish it from later experiments, I now call the original addon **Action Emotes #1** to distinguish it from the related addons I developed afterward. The GitHub repository is [ActionEmotes-1](https://github.com/babunidev/ActionEmotes-1), while its historical Lua, TOC and commands still use BuxbrewCharge identifiers.
 
 ## Using the original addon
 
-1. Place the addon in the appropriate WoW `Interface/AddOns` directory and enable it.
+1. Place the addon in the appropriate WoW `Interface/AddOns` directory and enable it. The folder and TOC filename need to match; the committed packaging has not been retested.
 2. Enter `/bbc watch`, press a button to identify its action-slot number, then enter `/bbc watch` again.
 3. Enter `/bbc slot <number>` to select the slot.
 4. Use that action to trigger eligible emotes.
@@ -32,9 +32,9 @@ I now call this original experiment **Action Emotes #1** to distinguish it from 
 
 ## What the code actually does
 
-The source wraps `UseAction`, watches one chosen slot, chooses among ten built-in emotes with `DoEmote`, and uses a fixed 21-second cooldown. It saves the watched slot in `BuxbrewChargeDB.slot`. It does **not** verify a successful ability cast, offer a configurable chance percentage or automate combat.
+The source wraps `UseAction`, watches one chosen slot, chooses among ten built-in emotes with `DoEmote`, and uses a fixed 21-second cooldown. It saves the watched slot in `BuxbrewChargeDB.slot`. It does **not** verify a successful ability cast, offer a configurable activation probability or automate combat. Randomness determines which emote is attempted, not whether an eligible press triggers one.
 
-The committed manifest is named `BuxbreCharge.toc`, which differs from `BuxbrewCharge.lua`. That packaging discrepancy remains uncorrected, and I have not conducted a fresh in-game test of the current committed code.
+The committed manifest is named `BuxbreCharge.toc`, which differs from `BuxbrewCharge.lua`. That packaging discrepancy remains uncorrected, and The currently committed addon has not undergone a fresh in-game test during this documentation review.
 
 **About this account:** This origin story comes from my recollections shared on October 31, 2026, combined with repository evidence. The original step-by-step ChatGPT conversation has not been recovered. Later AI-assisted documentation is not the same as original in-game testing.
 
