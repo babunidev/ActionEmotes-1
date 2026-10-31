@@ -1,21 +1,11 @@
-# Action Emotes #1 — creative concept (formerly BuxbrewCharge)
+# Action Emotes #1 — concept
 
-**By:** Babuni
+**By Babuni**
 
-## The original experience
+I wanted my warrior Buxbrew to have more personality than the abilities and damage numbers on the screen could provide. A little cheer, roar or ridiculous reaction at the right moment could make routine fighting feel more alive. I had explored that idea through WeakAuras for Madaxe Mokaya in Classic Anniversary and wanted to bring it to a WoW 1.12 private-server client.
 
-Combat in World of Warcraft can express a character's personality beyond damage numbers and ability effects. BuxbrewCharge adds a small, unpredictable flourish when the player presses a personally selected action button. A normal action becomes an opportunity for a shout, a cheer, a charge gesture or an incongruous reaction. The point is comic character presence, not efficiency.
+My first approach was deliberately small: choose one action slot, watch for its presses, and let one of the game's built-in emotes play when the cooldown allows. The button must still perform its original action. The emotes are character expression, not a gameplay advantage.
 
-The choice of **one watched action slot** makes the interaction deliberately tied to something the player does. The 21-second interval turns the flourish into a rare event rather than a continuous stream of messages. All ten current choices are built-in emote tokens; no custom animation, sound file, combat rotation or text-generation service is required.
+The current source uses ten built-in emote tokens and a fixed 21-second cooldown. It watches button presses, not confirmed successful casts. The watched slot persists account-wide. There is no graphical settings editor, configurable chance percentage or custom sound package.
 
-## Boundaries preserved in source
-
-- Trigger: press of the configured action slot, not successful cast detection.
-- Outcome: an emote using `DoEmote`; the original action is still invoked.
-- Persistence: account-wide watched-slot preference.
-- Customization: change the emote table in source or choose a new slot through chat. No in-game emote editor exists.
-- Mood: light, dramatic roleplay accents; not mechanical advantage.
-
-## Evidence versus inference
-
-The implementation and project description support this *character-flavor* reading. They do not prove a recorded original conversation, an approved name explanation, or tested client behavior. See [development history](docs/DEVLOG.md) for dated commits and [decision evidence](docs/DECISIONS.md) for facts versus interpretations.
+I describe the purpose from my own experience here; the precise mechanics are based on the committed Lua. [The development journal](docs/DEVLOG.md) distinguishes what I remember from what the Git history establishes.
