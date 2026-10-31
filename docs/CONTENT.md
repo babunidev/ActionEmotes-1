@@ -1,6 +1,6 @@
 # BuxbrewCharge — content inventory
 
-**Author:** Babuni.dev
+**Author:** Babuni
 
 ## Original/current emote pool
 
@@ -16,4 +16,4 @@ The `BBC:` chat prefix, `/bbc` command help, slot-watch reports, cooldown report
 
 ## Maintenance notes
 
-If content changes later, keep this inventory aligned with the Lua table and the actual client-supported token list. Treat game content and its intellectual-property ownership separately from Babuni.dev's author credit on the addon.
+If content changes later, keep this inventory aligned with the Lua table and the actual client-supported token list. Treat game content and its intellectual-property ownership separately from Babuni's author credit on the addon.
