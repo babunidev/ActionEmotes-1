@@ -1,19 +1,19 @@
-# BuxbrewCharge — content inventory
+# Action Emotes #1 — emotes and content
 
 **Author:** Babuni
 
-## Original/current emote pool
+## The emote pool I used
 
-The ten strings in `EMOTE_TOKENS` in `BuxbrewCharge.lua` are:
+The current Lua contains ten strings in `EMOTE_TOKENS` in `BuxbrewCharge.lua` are:
 
 `CHARGE`, `ATTACKTARGET`, `ROAR`, `CHEER`, `FLEX`, `TRAIN`, `LAUGH`, `CHUCKLE`, `BORED`, `WHISTLE`.
 
 The strings refer to built-in World of Warcraft emotes. They are configuration/data in the addon, not externally downloaded media files or original third-party sound samples.
 
-## Text surfaced to the player
+## What appears in chat
 
 The `BBC:` chat prefix, `/bbc` command help, slot-watch reports, cooldown reports and debug messages are generated in code. The emergency fallback is the text emote “roars a battlecry!” if `DoEmote` is absent.
 
-## Maintenance notes
+## What I need to preserve
 
-If content changes later, keep this inventory aligned with the Lua table and the actual client-supported token list. Treat game content and its intellectual-property ownership separately from Babuni's author credit on the addon.
+When I change the emotes, I need to keep this inventory aligned with the Lua table and verify what the client actually supports. World of Warcraft's built-in content remains distinct from my addon code and project work.
