@@ -1,6 +1,6 @@
 # BuxbrewCharge — change history
 
-**Author:** Babuni.dev
+**Author:** Babuni
 
 ## 2026-10-26 — documentation expansion
 
