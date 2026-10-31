@@ -17,3 +17,7 @@ This documentation pass does not authorize code fixes on its own.
 ## Identity and naming
 
 Refer to the person responsible for the project as **Babuni**. Use **babuni.dev** only for the portfolio, development platform or website—not as a person's name or byline. Keep `BuxbrewCharge` when referring to historical code or installed addon identifiers; the repository's current name is `ActionEmotes-1`.
+
+## Identity
+
+Refer to the individual as **Babuni**, not Babuni Dev. **babuni.dev** is the portfolio and development platform. The current repository is `ActionEmotes-1`; the historic addon identifiers remain unchanged.
