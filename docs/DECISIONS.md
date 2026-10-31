@@ -1,21 +1,21 @@
 # Action Emotes #1 — my decisions and their evidence
 
-**By:** Babuni
+**By Babuni**
 
-| Choice | Evidence | Status |
+| My choice | Evidence | Status |
 | --- | --- | --- |
-| I wanted to bring character-expression behavior from earlier WeakAuras experiments into WoW 1.12 | Babuni's retrospective, 2026-10-31 | Historical intent, Babuni-supplied |
-| I chose to describe the original environment as an unnamed private server as the public description of the original environment | Babuni's instruction, 2026-10-31 | Approved disclosure boundary |
-| I made the first addon for warrior Buxbrew rather than the earlier orc Madaxe Mokaya with warrior Buxbrew rather than the earlier orc Mad X Mokaya | Babuni's retrospective and related 2025-08-18 chat | Historical identity |
-| I chose Action Emotes #1 as the series name | Babuni's direction, 2026-10-31 | Naming chosen; GitHub repository renamed to `ActionEmotes-1` |
-| I used one selected action slot as the trigger | `UseAction` wrapper and saved slot | Implemented |
-| I used ten built-in emotes | Lua emote table and `DoEmote` | Implemented |
-| The current code has a fixed 21-second cooldown | Lua constant | Implemented; reason for exact interval unknown |
-| The addon saves an account-wide watched slot | `BuxbrewChargeDB.slot` and TOC | Source-observed |
-| I kept the original runtime identifiers in this history pass | Documentation-only scope, 2026-10-31 | No runtime rename attempted |
+| I wanted to bring character expression from earlier WeakAuras experiments into WoW 1.12 | My October 31, 2026 retrospective | Recalled motivation |
+| I chose not to name the private server in my public account | My October 31, 2026 instruction | Confirmed publication choice |
+| I made this addon for my warrior Buxbrew; Madaxe Mokaya was the orc associated with my earlier WeakAuras experiments | My recollection and a related August 18, 2025 chat | Historical context |
+| I adopted Action Emotes #1 as the name for the original project in the series | My October 31, 2026 decision | Chosen; repository is now `ActionEmotes-1` |
+| I used a single configurable action-slot trigger | Lua `UseAction` wrapper | Implemented |
+| The current addon selects from ten built-in emotes | Lua table and `DoEmote` | Implemented |
+| The current code has a 21-second cooldown | Lua constant | Implemented; original reason for the exact duration unknown |
+| The current addon saves the watched slot account-wide | `BuxbrewChargeDB.slot` and manifest | Source-observed |
+| I have not renamed the installed addon files or command identifiers | Current source files and documentation review | Runtime migration not attempted |
 
-## What I still need to check
+## What I still need to verify
 
-I renamed the GitHub repository to `ActionEmotes-1`. This is distinct from renaming the installed addon and its Lua/TOC files, which may affect installation and saved settings. The typo `BuxbreCharge.toc`, live WoW 1.12 compatibility and interaction with other `UseAction` wrappers require verification.
+The GitHub repository is now `ActionEmotes-1`, but the installed addon retains its historical Lua, TOC and slash-command identifiers. I still need to check the `BuxbreCharge.toc` naming discrepancy, current live-client compatibility and how the addon interacts with other `UseAction` wrappers.
 
-I have not yet audited the differences between this addon and later family members, including supported private-server client versions, have not yet been audited.
+I have not yet compared all later Action Emotes variants or their supported WoW client versions. That is a separate review.
