@@ -35,3 +35,10 @@ The older diffs now establish what changed, but not why those revisions were mad
 - Following my request to repair installation packaging, AI moved the unchanged Lua source and existing TOC contents into an installable `BuxbrewCharge/` folder and corrected the manifest filename to `BuxbrewCharge.toc`.
 - Documentation was updated to distinguish the repository name (`ActionEmotes-1`) from the addon folder installed in `Interface/AddOns/`.
 - **Verified:** file layout, manifest reference and unchanged Lua content by Git object identity. **Not yet verified:** loading or behavior in a WoW 1.12 client.
+
+## 2026-10-31 — WoW 1.12 event compatibility
+
+- At my request, AI replaced the newer-style `OnEvent(self, event)` callback with the original WoW 1.12 global-`event` convention. The initialization and logout branches now receive the correct event name under that API.
+- The unused `PLAYER_LOGIN` registration and `math.randomseed` call were removed. The client handles random-generator initialization; the emote-selection logic remains unchanged.
+- A mocked legacy-event smoke test was added to the existing packaging checks. This verifies event dispatch and slot persistence in a simulated environment, **not** in a running WoW client.
+- No emote, cooldown, action-hook, slash-command, manifest or licensing changes were made.

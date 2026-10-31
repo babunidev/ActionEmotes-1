@@ -26,3 +26,7 @@ This journal is a retrospective reconstruction, not a recovered development tran
 ## Correcting the installable folder — October 31, 2026
 
 The earlier review exposed a spelling mistake in the TOC filename and a repository layout that could not be copied straight into the game's AddOns directory. At my request, AI reorganized the unchanged addon files under `BuxbrewCharge/` and renamed the manifest to match. The repository layout and file references were checked, but the addon has not yet been tested in the game.
+
+## Revisiting Vanilla event behavior — October 31, 2026
+
+A source review revealed that the addon's event handler used a newer callback convention and tried to seed the random generator itself. After checking references specific to the old client, I asked AI to correct both together. The implementation now uses Vanilla's global event name, and the redundant seeding step is gone. A simulated event test covers the relevant code paths; testing in the game remains outstanding.

@@ -35,7 +35,7 @@ To distinguish this original experiment from the related addons that followed, I
 
 The source wraps `UseAction`, watches one chosen slot, chooses among ten built-in emotes with `DoEmote`, and uses a fixed 21-second cooldown. It saves the watched slot in `BuxbrewChargeDB.slot`. It does **not** verify a successful ability cast, offer a configurable activation probability or automate combat. Randomness determines which emote is attempted, not whether an eligible press triggers one.
 
-The original manifest spelling error (`BuxbreCharge.toc`) has been corrected by placing the renamed manifest alongside the unchanged Lua source in `BuxbrewCharge/`. The folder and manifest now match by inspection; this packaging fix has not yet been tested inside a running WoW 1.12 client.
+The original manifest spelling error (`BuxbreCharge.toc`) has been corrected by placing the renamed manifest alongside the Lua source in `BuxbrewCharge/`. The event handler now uses the WoW 1.12 global `event` convention, and the redundant `math.randomseed` call has been removed. Automated tests cover packaging and simulated legacy events; loading and gameplay still need verification inside a running WoW 1.12 client.
 
 **About this account:** This origin story comes from my recollections shared on October 31, 2026, combined with repository evidence. The original step-by-step ChatGPT conversation has not been recovered. Later AI-assisted documentation is not the same as original in-game testing.
 

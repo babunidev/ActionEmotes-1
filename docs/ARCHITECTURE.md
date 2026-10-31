@@ -13,7 +13,9 @@
 
 ## What the addon remembers
 
-`VARIABLES_LOADED`, `PLAYER_ENTERING_WORLD`, `PLAYER_LOGIN` and `PLAYER_LOGOUT` are registered. The first two hydrate the saved slot; login seeds the PRNG; logout copies the slot into `BuxbrewChargeDB`. `/bbc slot` also saves immediately. The DB is account-wide, not character-specific.
+`VARIABLES_LOADED`, `PLAYER_ENTERING_WORLD` and `PLAYER_LOGOUT` are registered. WoW 1.12 exposes the event name through the global `event` variable within an `OnEvent` callback; it does not provide the newer `(self, event)` parameters used previously. The first two events load the saved slot; logout copies the slot into `BuxbrewChargeDB`. `/bbc slot` also saves immediately. The DB is account-wide, not character-specific.
+
+The client initializes its random generator. The previous `PLAYER_LOGIN` handler calling `math.randomseed` has been removed; `math.random` still selects the emote token.
 
 The timer and watch-mode switch are **not** persisted. There is no separate cooldown scheduler, animation asset or dependency.
 
@@ -26,4 +28,4 @@ The timer and watch-mode switch are **not** persisted. There is no separate cool
 
 ## Files in my repository
 
-`BuxbrewCharge/BuxbrewCharge.lua` (unchanged implementation), `BuxbrewCharge/BuxbrewCharge.toc` (renamed manifest), `README.md`, `LICENSE`, and development records. The repository's outer `ActionEmotes-1` directory is not the WoW addon folder. No automated tests are committed in the inspected tree.
+`BuxbrewCharge/BuxbrewCharge.lua` (unchanged implementation), `BuxbrewCharge/BuxbrewCharge.toc` (renamed manifest), `README.md`, `LICENSE`, and development records. The repository's outer `ActionEmotes-1` directory is not the WoW addon folder. The repository includes automated package-layout checks and a Lua test harness that simulates Vanilla event globals. These tests cannot establish live-client behavior.

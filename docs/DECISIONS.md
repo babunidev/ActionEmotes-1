@@ -27,3 +27,7 @@ The November 1, 2025 diff (`de0c85d`) confirms that the emote pool changed from 
 ## Packaging correction — October 31, 2026
 
 Following my instruction to repair installation packaging, AI moved the unchanged Lua code into `BuxbrewCharge/` and renamed the TOC to `BuxbrewCharge.toc`. The original name and saved-variable key were kept to avoid an unrelated migration. The repository structure was verified, but a working WoW 1.12 client has not yet confirmed addon loading.
+
+## Event API correction — October 31, 2026
+
+Following my request to verify compatibility with the original 1.12 client, AI checked Vanilla-era event examples and the documented random API. The source now reads the global `event` value in its callback, drops the unnecessary `PLAYER_LOGIN` registration and avoids `math.randomseed`. The existing combat/emote design was deliberately preserved. A mocked test exercises event dispatch and saved-slot handling; live-client verification is still pending.
