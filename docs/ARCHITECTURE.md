@@ -1,6 +1,6 @@
 # BuxbrewCharge — implementation architecture
 
-**Author:** Babuni.dev  
+**Author:** Babuni  
 **Source evidence:** `BuxbrewCharge.lua`, `BuxbreCharge.toc`.
 
 ## Event and call path
