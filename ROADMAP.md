@@ -1,10 +1,10 @@
 # Action Emotes #1 — roadmap
 
-**Author:** Babuni
+**Creative:** Babuni
 
 ## What I have now
 
-My repository contains a 1.0.0 Lua addon, an interface-11200 manifest, a ten-emote pool, a 21-second throttle, `/bbc` commands and account-wide saved-slot support. I have not had the current code run in a fresh verification test.
+The repository contains a 1.0.0 Lua addon, an interface-11200 manifest, a ten-emote pool, a 21-second throttle, `/bbc` commands and account-wide saved-slot support. A fresh client verification of the currently committed addon has not been performed.
 
 ## What I still need to verify
 
@@ -15,4 +15,4 @@ My repository contains a 1.0.0 Lua addon, an interface-11200 manifest, a ten-emo
 - **Interoperability:** check behavior alongside other global `UseAction` hook addons.
 - **Edge cases:** check unknown slot, `/bbc reset`, logout saving, and immediate `/bbc emote` at startup.
 
-These are checks I have not completed as part of this documentation revision. I have not approved new gameplay features here.
+These are checks I have not completed as part of this documentation revision. No new gameplay features were approved in this documentation review.
