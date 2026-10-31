@@ -1,6 +1,6 @@
 # Action Emotes #1 — how my addon works
 
-**Author:** Babuni  
+**Creative:** Babuni  
 **Source evidence:** `BuxbrewCharge.lua`, `BuxbreCharge.toc`.
 
 ## What the Lua currently does
@@ -21,7 +21,7 @@ The timer and watch-mode switch are **not** persisted. There is no separate cool
 
 - The file `BuxbreCharge.toc` does not exactly match the project name; this may block loading depending on the installed folder name.
 - Global `UseAction` replacement can interact with other addons; load order and correct delegation must be checked.
-- The timer is based on `GetTime()` and starts from `LAST_EMOTE_TIME = 0`; initial availability depends on client uptime.
+- The timer uses `GetTime()` and starts from `LAST_EMOTE_TIME = 0`; an immediate first emote is not guaranteed if client uptime is less than 21 seconds.
 - Code reading is not equivalent to live-client confirmation.
 
 ## Files in my repository
