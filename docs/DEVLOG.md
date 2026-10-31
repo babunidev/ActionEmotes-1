@@ -21,4 +21,8 @@ An AI-assisted documentation review on October 26 expanded the project record an
 
 On October 31, the fuller history of my first addon became part of the documentation. To distinguish it from successors, I chose **Action Emotes #1** as the project name and kept the original server unnamed in the public account. AI helped assemble and refine the first-person narrative; creative direction and original local testing remain my own.
 
-This journal is a retrospective reconstruction, not a recovered development transcript. Packaging, current client behavior, interoperability with other `UseAction` addons and comparisons with later variants remain unverified.
+This journal is a retrospective reconstruction, not a recovered development transcript. Current client behavior, interoperability with other `UseAction` addons and comparisons with later variants remain unverified.
+
+## Correcting the installable folder — October 31, 2026
+
+The earlier review exposed a spelling mistake in the TOC filename and a repository layout that could not be copied straight into the game's AddOns directory. At my request, AI reorganized the unchanged addon files under `BuxbrewCharge/` and renamed the manifest to match. The repository layout and file references were checked, but the addon has not yet been tested in the game.
