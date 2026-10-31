@@ -1,6 +1,6 @@
 # BuxbrewCharge — experience design
 
-**Author:** Babuni.dev
+**Author:** Babuni
 
 The addon adds theatrical rhythm to everyday fighting. Its interaction grammar is: **player presses chosen button → occasionally a built-in emote plays → the ability still proceeds**. Randomness comes from *which* emote fires, not from a probabilistic on/off chance; the current gate is time-based only.
 
