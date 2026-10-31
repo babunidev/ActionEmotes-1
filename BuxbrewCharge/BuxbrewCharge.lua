@@ -159,21 +159,20 @@ SlashCmdList["BUXBREWCHARGE"] = function(raw)
 end
 
 -------------------------------------------------
--- Init / Save / RNG
+-- Init / Save (Vanilla 1.12 event convention)
 -------------------------------------------------
 local f = CreateFrame("Frame")
 f:RegisterEvent("VARIABLES_LOADED")
 f:RegisterEvent("PLAYER_ENTERING_WORLD")
-f:RegisterEvent("PLAYER_LOGIN")
 f:RegisterEvent("PLAYER_LOGOUT")
 
-f:SetScript("OnEvent", function(self, event)
+-- Vanilla 1.12 supplies 'event' as a global inside OnEvent handlers.
+-- The client initializes the random generator; manual seeding is unnecessary.
+f:SetScript("OnEvent", function()
   if event == "VARIABLES_LOADED" or event == "PLAYER_ENTERING_WORLD" then
     local db = ensureDB()
     WATCH_SLOT = db.slot or WATCH_SLOT
     chat("loaded slot " .. tostring(WATCH_SLOT or "none"))
-  elseif event == "PLAYER_LOGIN" then
-    math.randomseed(math.floor(GetTime() * 1000)); math.random()
   elseif event == "PLAYER_LOGOUT" then
     ensureDB().slot = WATCH_SLOT
   end
