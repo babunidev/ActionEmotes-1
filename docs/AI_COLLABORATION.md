@@ -25,3 +25,7 @@ For visitors, I want the story told in **my voice**. When I describe what I want
 When the AI makes a proposal, writes code or documentation, or checks a repository, That contribution should remain visible too. Creative direction and AI execution are different roles. Neither should be erased or invented.
 
 For historical details, clearly distinguish my recollection, a saved conversation, a Git commit, inspected source, an implemented change, and a verified test. Do not present the prose as a verbatim quote I previously wrote; it is an AI-assisted first-person narrative based on what I told the assistant.
+
+## Related development history
+
+This first BuxbrewCharge experiment is the starting point of the action-emote line. Its ten native emotes are a **fixed code-defined pool**, not an in-game editable registry; the later Roar Guild addons introduced that capability. The documented comparison with the other World of Warcraft expressive addons is in [the emote-addon family history](EMOTE_FAMILY_HISTORY.md).

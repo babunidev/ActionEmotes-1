@@ -29,3 +29,7 @@ The watched slot is validated as a whole number from 1 to 120 when configured th
 ## Files in my repository
 
 `BuxbrewCharge/BuxbrewCharge.lua` (unchanged implementation), `BuxbrewCharge/BuxbrewCharge.toc` (renamed manifest), `README.md`, `LICENSE`, and development records. The repository's outer `ActionEmotes-1` directory is not the WoW addon folder. The repository includes automated package-layout checks and a Lua test harness that simulates Vanilla event globals. These tests cannot establish live-client behavior.
+
+## Related development history
+
+This first BuxbrewCharge experiment is the starting point of the action-emote line. Its ten native emotes are a **fixed code-defined pool**, not an in-game editable registry; the later Roar Guild addons introduced that capability. The documented comparison with the other World of Warcraft expressive addons is in [the emote-addon family history](EMOTE_FAMILY_HISTORY.md).

@@ -38,3 +38,7 @@ With the client-specific API references checked, I asked AI to correct the attac
 ## Leaving live testing open to others — October 31, 2026
 
 The addon is still available, even though I'm no longer playing on the servers it was made for. Since live testing is no longer part of my own workflow, I asked AI to make the limits of automated verification clear and invite anyone who tries the addon to send feedback to babunigaming@gmail.com. No additional gameplay changes or in-game tests were made in this update.
+
+## 1 November 2026 — placing my first addon in the longer story
+
+Looking back across the ROAR and Flourish projects, I asked my AI assistant to compare the source rather than assume each new name represented different mechanics. This BuxbrewCharge experiment remains the first documented action-slot implementation; later projects explored written emotes, adjustable probability, multiple slots, a guild-editable registry, a Wrath port and spellcast-triggered flourishes. The comparison also confirmed that the four- and five-token battle lists were fixed in Lua, while Roar Guild introduced user-added native emote IDs. The [family history](EMOTE_FAMILY_HISTORY.md) preserves the comparison without retroactively rewriting the original motivation. Documentation only; no live game test.

@@ -16,3 +16,7 @@ The repository contains the 1.0.0 Lua addon and interface-11200 manifest in the 
 - **Edge cases:** verify the first-use emote, `/bbc timer` before the first emote, integer-only slot validation (1–120), `/bbc reset`, and logout saving. Mocked tests cover first-use and validation; live behavior remains unverified.
 
 These checks require a real compatible client, but I am no longer playing on those servers and do not plan to perform in-game testing myself. Anyone who tests the addon is welcome to report results and problems to **[babunigaming@gmail.com](mailto:babunigaming@gmail.com)**. This is an open invitation, not a claim that testing has already happened or that anyone has agreed to perform it.
+
+## Related development history
+
+This first BuxbrewCharge experiment is the starting point of the action-emote line. Its ten native emotes are a **fixed code-defined pool**, not an in-game editable registry; the later Roar Guild addons introduced that capability. The documented comparison with the other World of Warcraft expressive addons is in [the emote-addon family history](docs/EMOTE_FAMILY_HISTORY.md).

@@ -27,3 +27,7 @@ The repository is now `ActionEmotes-1`, originally `BuxbrewCharge`. Preserve his
 8. The creative no longer plays on the target servers and is not planning personal in-game verification. Do not present live-client tests as assigned or imminent. Invite voluntary community testing and direct feedback to babunigaming@gmail.com; distinguish feedback from independently verified results.
 
 The earlier `BuxbreCharge.toc` spelling issue was corrected by moving the unchanged code into the `BuxbrewCharge/` folder and naming its manifest `BuxbrewCharge.toc`. This layout is source-verified, not yet confirmed in-game. Keep the two runtime files together and the folder name aligned with the TOC. The existing MIT license remains in force unless the creative makes a separate licensing decision.
+
+## Cross-project accuracy
+
+Read [the emote-addon family history](docs/EMOTE_FAMILY_HISTORY.md) before making lineage claims. This project's emote pool is fixed in Lua; the later Roar Guild versions support user-added native emote tokens. Preserve first-person creative authorship, avoid invented succession or game tests, and keep source implementation separate from recollections.

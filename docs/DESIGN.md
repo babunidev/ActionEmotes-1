@@ -15,3 +15,7 @@ In the emote pool, I combined overt battle presence (CHARGE, ATTACKTARGET, ROAR)
 ## What I have not verified yet
 
 Live tests are still needed to check chat readability, watch-mode noise, preservation of the original ability and localization of built-in tokens. These checks have not been completed in this documentation pass.
+
+## Related development history
+
+This first BuxbrewCharge experiment is the starting point of the action-emote line. Its ten native emotes are a **fixed code-defined pool**, not an in-game editable registry; the later Roar Guild addons introduced that capability. The documented comparison with the other World of Warcraft expressive addons is in [the emote-addon family history](EMOTE_FAMILY_HISTORY.md).

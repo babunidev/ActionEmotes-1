@@ -39,3 +39,7 @@ At my request, AI corrected the `/attacktarget` emote's internal token to `ATTAC
 ## Community testing — October 31, 2026
 
 Since I'm no longer playing on the servers this addon was made for, I won't be performing additional in-game tests myself. The addon remains available for anyone to try, and feedback can be sent to **babunigaming@gmail.com**. This changes how testing is invited and documented, not the runtime code or the historical account of earlier personal tests.
+
+## Related development history
+
+This first BuxbrewCharge experiment is the starting point of the action-emote line. Its ten native emotes are a **fixed code-defined pool**, not an in-game editable registry; the later Roar Guild addons introduced that capability. The documented comparison with the other World of Warcraft expressive addons is in [the emote-addon family history](EMOTE_FAMILY_HISTORY.md).

@@ -56,3 +56,8 @@ The older diffs now establish what changed, but not why those revisions were mad
 - At my request, AI updated the README, roadmap and development documentation to clarify that I no longer play on the target servers and will not be performing new in-game tests myself.
 - Community members are welcome to test the addon and send feedback to **babunigaming@gmail.com**.
 - **Documentation only:** the latest runtime remains unverified in-game; no Lua, TOC, installation or license changes were made.
+
+## 2026-11-01 — family-history documentation
+
+- Linked the [source-grounded addon family history](docs/EMOTE_FAMILY_HISTORY.md) and clarified this project's fixed emote pool in comparison with later editable registries.
+- Documentation only; no addon code or manifest changes.

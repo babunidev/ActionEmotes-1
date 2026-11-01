@@ -48,3 +48,7 @@ Anyone who tests it is welcome to share feedback, including the client/server ve
 ## Project documentation
 
 [Concept](CONCEPT.md) · [Development journal](docs/DEVLOG.md) · [AI collaboration](docs/AI_COLLABORATION.md) · [Architecture](docs/ARCHITECTURE.md) · [Design](docs/DESIGN.md) · [Content](docs/CONTENT.md) · [Decisions](docs/DECISIONS.md) · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md) · [AI development instructions](AGENTS.md)
+
+## Related emote-addon history
+
+This first BuxbrewCharge experiment is the starting point of the action-emote line. Its ten native emotes are a **fixed code-defined pool**, not an in-game editable registry; the later Roar Guild addons introduced that capability. The larger sequence, including Flourish Forever and the separate sound-restoration projects, is documented in [the expressive-addon history](docs/EMOTE_FAMILY_HISTORY.md).
