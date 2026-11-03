@@ -31,3 +31,7 @@ The earlier `BuxbreCharge.toc` spelling issue was corrected by moving the unchan
 ## Cross-project accuracy
 
 Read [the emote-addon family history](docs/EMOTE_FAMILY_HISTORY.md) before making lineage claims. This project's emote pool is fixed in Lua; the later Roar Guild versions support user-added native emote tokens. Preserve first-person creative authorship, avoid invented succession or game tests, and keep source implementation separate from recollections.
+
+## Repository-local documentation standard
+
+Before writing or changing project documentation, read [docs/DOCUMENTATION.md](docs/DOCUMENTATION.md). These rules travel with this repository and do not depend on the babuni.dev ChatGPT Project. Preserve all project-specific technical, creative, canon, safety, licensing, and historical rules in this file; follow the linked standard for public first-person narrative, human–AI attribution, concise development journals, decision records, and evidence-based verification. **Babuni** is the human creative; **babuni.dev** is the website/portfolio, not the person. Preserve third-party credits and historical legal notices. References above to a dated “documentation-only audit” describe that past task, not a permanent ban on later authorized implementation.
