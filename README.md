@@ -47,7 +47,9 @@ This origin story draws on my recollections from October 31, 2026 and the reposi
 
 ## Project documentation
 
-[Concept](CONCEPT.md) · [Development journal](docs/DEVLOG.md) · [AI collaboration](docs/AI_COLLABORATION.md) · [Architecture](docs/ARCHITECTURE.md) · [Design](docs/DESIGN.md) · [Content](docs/CONTENT.md) · [Decisions](docs/DECISIONS.md) · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md) · [AI development instructions](AGENTS.md)
+- **Project** — [Concept](CONCEPT.md), [Changelog](CHANGELOG.md), [Roadmap](ROADMAP.md)
+- **History** — [Development journal](docs/DEVLOG.md), [AI collaboration](docs/AI_COLLABORATION.md), [Decisions](docs/DECISIONS.md)
+- **Reference** — [Architecture](docs/ARCHITECTURE.md), [Design](docs/DESIGN.md), [Content](docs/CONTENT.md), [AI development instructions](AGENTS.md)
 
 ## Related emote-addon history
 
