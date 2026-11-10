@@ -4,14 +4,6 @@
 
 This was my first World of Warcraft addon. For Buxbrew, I wanted my character to feel more expressive during ordinary gameplay. It watches an action-bar slot I choose and, when I press it, performs a randomly chosen built-in emote when its cooldown permits, without replacing the action itself. Despite its original name, it was never restricted to Charge.
 
-## Where it began
-
-Before this, I had experimented with WeakAuras in WoW Classic Anniversary for my orc **Madaxe Mokaya**. When I later played my warrior **Buxbrew** on an unnamed private server using the older WoW 1.12 client, I wanted some of that personality there too.
-
-The addon began locally with help from an ordinary ChatGPT conversation. During development, I discussed code with my AI assistant, copied Lua snippets into files myself, created the folders, installed the addon and tested it in the game. Each time I spotted something to improve, I went back to the chat, worked through the change, copied the new code and tried again. At the time, I wasn't using Cursor, Codex or another integrated coding agent. It took persistence, but seeing Buxbrew respond in-game made it worthwhile.
-
-To distinguish this original experiment from the related addons that followed, I now call it **Action Emotes #1**. The GitHub repository is [ActionEmotes-1](https://github.com/babunidev/ActionEmotes-1), while its historical Lua, TOC and commands still use BuxbrewCharge identifiers.
-
 ## Using the original addon
 
 1. Download and extract the repository archive, or clone the repository.
@@ -43,11 +35,21 @@ This addon remains available for anyone who wants to try it. Since I'm no longer
 
 Anyone who tests it is welcome to share feedback, including the client/server version, what worked, and any errors, at **[babunigaming@gmail.com](mailto:babunigaming@gmail.com)**.
 
-**About this account:** This origin story comes from my recollections shared on October 31, 2026, combined with repository evidence. The original step-by-step ChatGPT conversation has not been recovered. Later AI-assisted documentation is not the same as original in-game testing.
+## Where it began
+
+Before this, I had experimented with WeakAuras in WoW Classic Anniversary for my orc **Madaxe Mokaya**. When I later played my warrior **Buxbrew** on an unnamed private server using the older WoW 1.12 client, I wanted some of that personality there too.
+
+The addon began locally with help from an ordinary ChatGPT conversation. During development, I discussed code with my AI assistant, copied Lua snippets into files myself, created the folders, installed the addon and tested it in the game. Each time I spotted something to improve, I went back to the chat, worked through the change, copied the new code and tried again. At the time, I wasn't using Cursor, Codex or another integrated coding agent. It took persistence, but seeing Buxbrew respond in-game made it worthwhile.
+
+To distinguish this original experiment from the related addons that followed, I now call it **Action Emotes #1**. The GitHub repository is [ActionEmotes-1](https://github.com/babunidev/ActionEmotes-1), while its historical Lua, TOC and commands still use BuxbrewCharge identifiers.
+
+This origin story draws on my recollections from October 31, 2026 and the repository record. The original ChatGPT conversation is unavailable.
 
 ## Project documentation
 
-[Concept](CONCEPT.md) · [Development journal](docs/DEVLOG.md) · [AI collaboration](docs/AI_COLLABORATION.md) · [Architecture](docs/ARCHITECTURE.md) · [Design](docs/DESIGN.md) · [Content](docs/CONTENT.md) · [Decisions](docs/DECISIONS.md) · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md) · [AI development instructions](AGENTS.md)
+- **Project** — [Concept](CONCEPT.md), [Changelog](CHANGELOG.md), [Roadmap](ROADMAP.md)
+- **History** — [Development journal](docs/DEVLOG.md), [AI collaboration](docs/AI_COLLABORATION.md), [Decisions](docs/DECISIONS.md)
+- **Reference** — [Architecture](docs/ARCHITECTURE.md), [Design](docs/DESIGN.md), [Content](docs/CONTENT.md), [AI development instructions](AGENTS.md)
 
 ## Related emote-addon history
 
