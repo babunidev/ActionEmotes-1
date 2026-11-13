@@ -11,7 +11,7 @@ Use **creative** as the role label for the human who conceived or made the work,
 
 Describe AI accurately and specifically: ChatGPT was a conversational Lua helper in the original development; there was no integrated agent editing files or testing in-game at that stage. Later AI documentation work must be distinguished from original development. Avoid invented first-person quotes, feelings, experiments, decisions or tests. The first-person narrative is an assisted reconstruction, not a claim of verbatim authorship of every sentence.
 
-Technical references, changelog facts, code descriptions and test inventories may use neutral language when clearer. Keep development journal entries brief and publishable, not a dump of tool operations. Preserve meaningful decisions, iterations and failures without inventing events.
+Keep changelog entries factual and technical details concise. Keep development journal entries brief and publishable, not a dump of tool operations. Preserve meaningful decisions, iterations and failures without inventing events.
 
 ## Project boundaries
 
