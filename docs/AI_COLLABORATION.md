@@ -1,5 +1,7 @@
 # Action Emotes #1 — how I worked with AI
 
+Follow [the documentation standard](DOCUMENTATION.md) for first-person author voice throughout project documentation, factual changelogs, and naming the AI tool and verified model for each contribution.
+
 **Creative: Babuni**
 
 ## My role
@@ -20,7 +22,7 @@ The complete original development chat has not been recovered. Those memories ar
 
 ## How I want this collaboration recorded
 
-For visitors, I want the story told in **my voice**. When I describe what I wanted, decided, tried or experienced, write in first person without beginning sentences with “I” or “My.” Integrate first-person pronouns naturally, with varied sentence openings. Refer to **my AI assistant**, **ChatGPT** or the specific tool actually used for that step—not a vague AI narrator claiming to own the process.
+For visitors, I want the story told in **my voice**. When I describe what I wanted, decided, tried or experienced, write in first person without beginning sentences with “I” or “My.” Integrate first-person pronouns naturally, with varied sentence openings. Name the specific tool actually used for that step and its verified model.
 
 When the AI makes a proposal, writes code or documentation, or checks a repository, That contribution should remain visible too. Creative direction and AI execution are different roles. Neither should be erased or invented.
 
